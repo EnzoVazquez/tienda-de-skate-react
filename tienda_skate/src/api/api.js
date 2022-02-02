@@ -22,7 +22,3 @@ const promesa = new Promise(function(resolve, rejected){
         resolve(products)
     }, 2000)
 })
-
-function getProducts(){
-    return promesa
-}
