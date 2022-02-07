@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import './ItemCount.css'
-function ItemCount({stock, initial, onAdd}){
-    <div>
-        <div id="onAdd">
-        <button id="restar">-</button>
-        <label>{initial}</label>
-        <button>+</button>
-        </div>
-        <button id="agCarrito">Agregar al Carrito</button>
-    </div>
+
+function ItemCount({stock, initial}){
+    const [cantidad, setCantidad] = useState(initial);
+    function Sumar(){
+        setCantidad(cantidad +1)
+    };
+    function Restar(){
+        setCantidad(cantidad -1)
+    };
     
-    var restar = document.getElementById("restar")
-    restar.onclick = function(){
-        initial--;
-    }
-    var sumar = document.getElementById("sumar")
-    sumar.onclick = function(){
-        initial++;
-    }
-    var agCarrito = document.getElementById("agCarrito")
-    agCarrito.onclick = function(){
-        return onAdd
-    }
+   return(
+       <div className="itemCount">
+           <div className="botonera">
+             <button onClick={Restar} >-</button>
+             <p>{cantidad}</p>
+             <button onClick={Sumar}>+</button>
+           </div>
+           <div className="agCarrito">
+               <button>Agregar al carrito</button>
+           </div>
+       </div>
+   )
 }
+
 export default ItemCount;

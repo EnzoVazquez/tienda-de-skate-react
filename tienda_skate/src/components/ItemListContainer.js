@@ -8,7 +8,7 @@ function AgregarItems(){
 function ItemList(){
     return(
         <div>
-            <ItemCount stock={5} initial ={1} onAdd={AgregarItems}/>
+            <ItemCount stock={5} initial={1} onAdd={AgregarItems}/>
         </div>
     )
 }

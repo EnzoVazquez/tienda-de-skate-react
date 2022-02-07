@@ -1,3 +1,37 @@
-.onAdd{
-    width: 300px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.itemCount{
+    width: 200px;
+    background-color: white;
+    color: black;
+    margin: auto;
+    border: solid;
+    border-width: thin;
+}
+.botonera{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.botonera button{
+    border-radius: 1000px;
+    background-color: #9B0000;
+    color: white;
+    width: 30px;
+    height: 50%;
+}
+.botonera p{
+    color: black;
+}
+.agCarrito{
+    text-align: center;
+}
+.agCarrito button{
+    border-radius: 1000px;
+    background-color: #9B0000;
+    color: white;
 }

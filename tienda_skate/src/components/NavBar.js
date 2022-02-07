@@ -13,7 +13,7 @@ export default function NavBar(){
                 <a>LIJAS</a>
                 <Carrito/>
             </ul>
-            <div>Todos los lunes 6 cuotas sin interes con tarjeta visa</div>
+            <div className='oferta'>Todos los lunes 6 cuotas sin interes con tarjeta visa</div>
         </div>
   )  
 }

@@ -5,10 +5,14 @@ import ItemList from './components/ItemListContainer'
 
 function App(){
   return (
-    <header>
-      <NavBar/>
-      <ItemList greeting="Hola buen dia"/>
-    </header>
+    <body>
+      <header>
+       <NavBar/>
+      </header>
+      <main>
+        <ItemList/>
+      </main>
+    </body>
   )
 }
 
