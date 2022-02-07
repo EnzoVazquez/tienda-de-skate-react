@@ -4,12 +4,18 @@ import './ItemCount.css'
 function ItemCount({stock, initial}){
     const [cantidad, setCantidad] = useState(initial);
     function Sumar(){
-        setCantidad(cantidad +1)
+        if (cantidad < stock) {
+            setCantidad(cantidad +1);
+        }
     };
     function Restar(){
-        setCantidad(cantidad -1)
+        if(cantidad > 0){
+            setCantidad(cantidad -1);
+        }
     };
-    
+    function alCarrito(){
+        onAdd(cantidad);
+    }
    return(
        <div className="itemCount">
            <div className="botonera">
@@ -18,7 +24,7 @@ function ItemCount({stock, initial}){
              <button onClick={Sumar}>+</button>
            </div>
            <div className="agCarrito">
-               <button>Agregar al carrito</button>
+               <button onClick={alCarrito}>Agregar al carrito</button>
            </div>
        </div>
    )

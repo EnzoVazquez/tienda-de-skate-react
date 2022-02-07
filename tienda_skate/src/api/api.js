@@ -1,24 +1,30 @@
 //deberia venir del backend
-import React from "react"
 const products = [ 
     {
         id: 1,
-        title:'tabla santa cruz',
-        descrption:'tabla santa cruz con diseño de calaveras',
-        price: 10000,
-        pictureUrl:'eaeaeaa',
+        title:'Tabla santa cruz',
+        price: 21999,
+        pictureUrl:'https://www.cristobalcolon.com/producto_detalle/tablasanta_cruz_emmanuel_guzman/',
     },
     {
         id: 2,
-        title:'tabla quicksilver',
-        descrption:'tabla quicksilver con diseño floral',
-        price: 9000,
-        pictureUrl:'eaeaeaa',
+        title:'Truck Independent X2 Toy Machine',
+        price: 21999,
+        pictureUrl:'https://www.cristobalcolon.com/producto_detalle/truckindependent_x2_toy_machine/',
+    },
+    {
+        id: 3,
+        title:'Rulemanes Bronson Milton Martinez G3 ABEC7',
+        price:'8999',
+        pictureUrl:'https://www.cristobalcolon.com/producto_detalle//rulemanesbronson_milton_martinez_g3_abec7/14448.html'
     }
 ]
 const promesa = new Promise(function(resolve, rejected){
-    setTimeout(function(p){
+    setTimeout(function(){
         //retornar productos
-        resolve(products)
-    }, 2000)
+        resolve(products);
+    }, 2000);
 })
+export default function GetItems(){
+    return promesa;
+}
