@@ -15,8 +15,8 @@ const products = [
     {
         id: 3,
         title:'Rulemanes Bronson Milton Martinez G3 ABEC7',
-        price:'8999',
-        pictureUrl:'https://www.cristobalcolon.com/producto_detalle//rulemanesbronson_milton_martinez_g3_abec7/14448.html'
+        price:8999,
+        pictureUrl:'https://www.cristobalcolon.com/producto_detalle//rulemanesbronson_milton_martinez_g3_abec7/'
     }
 ]
 const promesa = new Promise(function(resolve, rejected){

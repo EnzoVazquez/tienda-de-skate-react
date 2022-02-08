@@ -17,12 +17,10 @@ function AgregarItem(ItemCount){
     console.log(ItemCount)
 }
 
- function ItemList(){
     return(
         <div>
             {products.length > 0 ? <ItemList products={products}/> : <p>Cargando...</p>}
             <ItemCount stock={5} initial={1} onAdd={AgregarItem}/>
         </div>
     )
-}
 }
