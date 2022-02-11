@@ -9,7 +9,7 @@ export default function ItemListContainer(){
 useEffect(() =>{
     GetItems().then(function(products){
         console.log(products);
-        setProducts(products)
+        setProducts(products);
     })
 }, []);
 //array de dependencias, vacio se ejecuta cuando se monta
