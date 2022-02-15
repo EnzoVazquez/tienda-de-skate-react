@@ -5,9 +5,9 @@ import Item from "./Item";
 // 2do filtra un producto(cualquiera)
 // 3ero guardar en un estado ese producto
 //pasarle el producto a ItemDetail
-export default function ItemDetailContainer(products){
+export default function ItemDetailContainer(product){
   const [products, setProducts] = useState([]);
-  useEffect(()=>{
+  useEffect.then(()=>{
     const item = GetItems.filter(function(products){
       return(products.id === 1)
     })
