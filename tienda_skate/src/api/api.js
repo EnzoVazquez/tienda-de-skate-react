@@ -23,7 +23,7 @@ const promesa = new Promise(function(resolve, rejected){
     setTimeout(function(){
         //retornar productos
         resolve(products);
-    }, 2000);
+    }, 1000);
 })
 export default function GetItems(){
     return promesa;

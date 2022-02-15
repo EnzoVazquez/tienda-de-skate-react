@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import GetItems from "../api/api";
 import ItemDetail from './ItemDetail'
 // 1ero busca con getItem la lista de productos
@@ -7,15 +8,16 @@ import ItemDetail from './ItemDetail'
 //pasarle el producto a ItemDetail
 export default function ItemDetailContainer(){
   const [product, setProduct] = useState([]);
+  const {productId} = useParams()
   useEffect(()=>{
-    GetItems().then((product)=>{
-      const product = products.find((i)=> i.id === 1);
-      setProduct(product);
-    })
+    GetItems().then((items)=>{
+      const item = items.find((i)=> i.id.toString() === productId);
+      setProduct(item);
+    },[productId])
   })
   return(
     <div>
-      <ItemDetail/>
+      <ItemDetail product={product}/>
     </div>
   )
 }

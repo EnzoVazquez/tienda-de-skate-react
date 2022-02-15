@@ -1,10 +1,11 @@
+import'./ItemDetail.css'
 
-export default function ItemDetail({product}){
+export default function ItemDetail({item}){
     return(
         <div>
-            <img src={product.pictureUrl}></img>
-            <p>{product.title}</p>
-            <h2>$ {product.price}</h2>
+            <img src={item.pictureUrl}></img>
+            <p>{item.title}</p>
+            <h2>$ {item.price}</h2>
             <button>Comprar</button>
         </div>
     )

@@ -19,6 +19,8 @@
 .producto{
     width: 300px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 hr{
     color: #B5B2B2;
@@ -26,4 +28,8 @@ hr{
     width: 200px;
     margin: auto;
     margin-top: 1rem;
+}
+.nombreProducto{
+    text-decoration: none;
+    color: black;
 }
