@@ -8,8 +8,6 @@
     background-color: white;
     color: black;
     margin: auto;
-    border: solid;
-    border-width: thin;
 }
 .botonera{
     display: flex;

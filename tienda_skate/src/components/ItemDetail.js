@@ -1,12 +1,11 @@
-import ItemDetailContainer from "./ItemDetailContainer"
-import Item from "./Item"
 
-export default function ItemDetail({item}){
+export default function ItemDetail({product}){
     return(
         <div>
-            <img src={item.product.pictureUrl}></img>
-            <p>{item.product.title}</p>
-            <h2>$ {item.product.price}</h2>
+            <img src={product.pictureUrl}></img>
+            <p>{product.title}</p>
+            <h2>$ {product.price}</h2>
+            <button>Comprar</button>
         </div>
     )
 }

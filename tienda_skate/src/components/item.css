@@ -20,3 +20,10 @@
     width: 300px;
     cursor: pointer;
 }
+hr{
+    color: #B5B2B2;
+    border-radius: 2px;
+    width: 200px;
+    margin: auto;
+    margin-top: 1rem;
+}
