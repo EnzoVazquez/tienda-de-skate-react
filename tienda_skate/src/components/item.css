@@ -4,12 +4,19 @@
     box-sizing: border-box;
 }
 .producto img{
+     display:block;
+    margin:auto;
     width: 200px;
 }
 .precio{
     color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.nombreProducto{
+    margin-left: 10px;
 }
 .producto{
-    border: thin;
-    border-color: black;
+    width: 300px;
+    cursor: pointer;
 }

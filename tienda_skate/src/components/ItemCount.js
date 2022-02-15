@@ -13,9 +13,6 @@ function ItemCount({stock, initial}){
             setCantidad(cantidad -1);
         }
     };
-    function alCarrito(){
-        onAdd(cantidad);
-    }
    return(
        <div className="itemCount">
            <div className="botonera">
@@ -24,7 +21,7 @@ function ItemCount({stock, initial}){
              <button onClick={Sumar}>+</button>
            </div>
            <div className="agCarrito">
-               <button onClick={alCarrito}>Agregar al carrito</button>
+               <button>Agregar al carrito</button>
            </div>
        </div>
    )
