@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './ItemCount.css'
 
-function ItemCount({stock, initial}){
+function ItemCount({stock, initial, onAdd}){
     const [cantidad, setCantidad] = useState(initial);
     function Sumar(){
         if (cantidad < stock) {
@@ -13,15 +13,18 @@ function ItemCount({stock, initial}){
             setCantidad(cantidad -1);
         }
     };
+    function alCarrito(){
+        onAdd(cantidad)
+    }
    return(
        <div className="itemCount">
            <div className="botonera">
-             <button onClick={Restar} >-</button>
+             <button onClick={Restar} className="restar">-</button>
              <p>{cantidad}</p>
-             <button onClick={Sumar}>+</button>
+             <button onClick={Sumar} className="sumar">+</button>
            </div>
            <div className="agCarrito">
-               <button>Agregar al carrito</button>
+               <button onClick={alCarrito}>Agregar al carrito</button>
            </div>
        </div>
    )

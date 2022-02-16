@@ -4,32 +4,36 @@
     box-sizing: border-box;
 } 
 .itemCount{
-    width: 200px;
+    width: 100px;
     background-color: white;
     color: black;
-    margin: auto;
+    margin-left: 0;
 }
 .botonera{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.botonera button{
-    border-radius: 1000px;
-    background-color: #9B0000;
-    color: white;
-    width: 30px;
-    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
 }
 .botonera p{
     color: black;
+}
+.botonera button{
+    background-color: #9B0000;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
 }
 .agCarrito{
     text-align: center;
 }
 .agCarrito button{
-    border-radius: 1000px;
     background-color: #9B0000;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
     color: white;
+    font-size: 1rem;
+    margin-top: rem;
+    text-transform: uppercase;
 }
