@@ -2,11 +2,13 @@ import'./ItemDetail.css'
 
 export default function ItemDetail(product){
     return(
-        <div>
-            <img src={product.pictureUrl}></img>
-            <p>{product.title}</p>
-            <h2>$ {product.price}</h2>
-            <button>Comprar</button>
+        <div className='detalles'>
+            <img src={product.product.pictureUrl}></img>
+            <div className='texto'>
+                <p>{product.product.title}</p>
+                <h2>$ {product.product.price}</h2>
+                <button>Comprar</button>
+            </div>
         </div>
     )
 }

@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+.detalles{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  margin-left: 0;
+  row-gap: 1rem;
+}
+.detalles img{
+    width: 300px;
+    margin-left: 3rem;
+}
+.detalles p{
+    color: black;
+    font-size: 3rem;
+}
+.detalles h2{
+    font-weight: lighter;
+}
+.detalles button{
+    background-color: #9B0000;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+    margin-top: rem;
+    text-transform: uppercase;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: -6rem;
+}
