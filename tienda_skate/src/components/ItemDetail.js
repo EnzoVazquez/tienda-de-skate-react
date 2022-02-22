@@ -1,14 +1,20 @@
 import'./ItemDetail.css'
 import ItemCount from './ItemCount'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
 export default function ItemDetail(product){
+    const {agCarrito} = useContext(CartContext)
+
     const [cantidad, setCantidad] = useState()
+
     function AgregarItem(cantidad){
-        console.log(cantidad);
         setCantidad(cantidad);
+        agCarrito(cantidad, product);
+        console.log(agCarrito);
     }
+
     return(
         <div className='detalles'>
             <img src={product.product.pictureUrl}></img>
