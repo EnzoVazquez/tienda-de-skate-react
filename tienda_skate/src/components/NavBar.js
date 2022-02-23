@@ -12,7 +12,9 @@ export default function NavBar(){
                 <a>TRUCKERS</a>
                 <a>RULEMANES</a>
                 <a>LIJAS</a>
-                <Carrito/>
+                <Link to={'/cart'}>
+                    <Carrito/>
+                </Link>
             </ul>
             <div className='oferta'>Todos los lunes 6 cuotas sin interes con tarjeta visa</div>
         </div>

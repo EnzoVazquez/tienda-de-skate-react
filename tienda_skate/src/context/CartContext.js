@@ -5,7 +5,7 @@ export const CartContext = createContext([]);
 export default function CartContextProvider({children}){
     const [carrito, setCarrito] = useState([]);
 
-    function agCarrito(cantidad, product){
+    function agCarrito({cantidad, product}){
         setCarrito([...carrito, {...cantidad, product}])
     };
 

@@ -12,7 +12,6 @@ export default function ItemDetail(product){
     function AgregarItem(cantidad){
         setCantidad(cantidad);
         agCarrito(cantidad, product);
-        console.log(agCarrito);
     }
 
     return(
