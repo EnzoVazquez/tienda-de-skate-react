@@ -3,13 +3,13 @@ import { CartContext } from "../context/CartContext";
 import './cart.css'
 
 export default function Cart(){
-    const {carrito, setCarrito} = useContext(CartContext)
+    const {carrito} = useContext(CartContext)
 
     console.log(carrito);
 
     const removeItem = (id) =>{
         const newCarrito = carrito.filter((product) => product.id !== id);
-        setCarrito(newCarrito);
+        carrito(newCarrito);
     };
     function clear([carrito]){
         carrito.pop()
