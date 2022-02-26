@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.itemCarrito{
+ display: flex;
+ margin: 1rem;
+}
+.itemCarrito h2{
+    color: black;
+}
+.itemCarrito p{
+    color: black;
+}
+.itemCarrito img{
+    width: 100px;
+    float: left;
+    margin-left: 1rem;
+}
+.itemCarrito button{
+    color: white;
+    background-color:#9B0000;
+    margin-top: 1.5rem;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+}
+.detalle{
+    margin-left: 1rem;
+}
