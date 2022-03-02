@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 export default function ItemDetail(product){
-    const {agCarrito} = useContext(CartContext)
+    const {addToCar} = useContext(CartContext)
 
     const [cantidad, setCantidad] = useState()
 
     function AgregarItem(cantidad){
-        setCantidad(cantidad);
-        agCarrito(cantidad, product);
+        addToCar(cantidad, product)
     }
 
     return(
