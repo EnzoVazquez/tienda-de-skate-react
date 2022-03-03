@@ -10,7 +10,7 @@ export default function ItemDetail(product){
     const [cantidad, setCantidad] = useState()
 
     function AgregarItem(cantidad){
-        addToCar(cantidad, product)
+        addToCar(cantidad, product.product)
     }
 
     return(

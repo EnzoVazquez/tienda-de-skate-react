@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import ItemCount from "./ItemCount"
 import GetItems from "../api/api";
 import ItemList from "./itemList";
+import { getDocs, collection } from "firebase/firestore";
+import { baseDatos } from "../firebase";
 
 export default function ItemListContainer(){
     const [products, setProducts] = useState([]);
@@ -13,6 +15,7 @@ useEffect(() =>{
     })
 }, []);
 //array de dependencias, vacio se ejecuta cuando se monta
+
 function AgregarItem(ItemCount){
     console.log(ItemCount)
 }

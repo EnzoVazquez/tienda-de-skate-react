@@ -7,15 +7,11 @@ import { CartContext } from '../context/CartContext'
 export default function Carrito(){
     const {carrito} = useContext(CartContext);
 
-    function numeroItems(){
-        const numero = carrito.length;
-        console.log(numero)
-    };
 
     return(
         <div>
             <p><FontAwesomeIcon icon={faShoppingCart}/></p>
-            <p>{numero}</p>
+            <p>{carrito.length}</p>
             
         </div>
     )
