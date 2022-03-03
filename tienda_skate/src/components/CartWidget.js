@@ -9,7 +9,7 @@ export default function Carrito(){
 
 
     return(
-        <div>
+        <div className='.contenedorCarro'>
             <p><FontAwesomeIcon icon={faShoppingCart}/></p>
             <p>{carrito.length}</p>
             

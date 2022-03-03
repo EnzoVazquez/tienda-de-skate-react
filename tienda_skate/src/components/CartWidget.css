@@ -6,3 +6,8 @@
 p{
     margin: 0%;
 }
+.contenedorCarro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
