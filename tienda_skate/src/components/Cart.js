@@ -13,6 +13,7 @@ export default function Cart(){
                 carrito.map( function(product){
                     return(
                     <div>
+                        {carrito.length > 0 ? <div>
                         <div key={product.product.id} className="itemCarrito">
                             <img src={product.product.pictureUrl}></img>
                             <div className="detalle">
@@ -22,6 +23,7 @@ export default function Cart(){
                             </div>
                         </div>
                         <button onClick={vaciarCarrito}>Eliminar items</button>
+                    </div> : <div> <p>Aun no tienes items en tu carrito</p><button>volver a la tienda</button> </div>}
                     </div>
                     )
                 })
