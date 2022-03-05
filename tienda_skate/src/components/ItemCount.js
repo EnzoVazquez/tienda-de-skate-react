@@ -14,8 +14,8 @@ function ItemCount({stock, initial, onAdd}){
         }
     };
     function alCarrito(){
-        onAdd(cantidad)
-        console.log(cantidad)
+        onAdd(cantidad);
+        console.log(cantidad);
     }
    return(
        <div className="itemCount">

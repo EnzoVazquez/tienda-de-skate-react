@@ -5,13 +5,12 @@ import Item from "./Item";
 import ItemDetail from './ItemDetail'
 import { doc, getDoc } from "firebase/firestore";
 import { baseDatos } from "../firebase";
-// 1ero busca con getItem la lista de productos
-// 2do filtra un producto(cualquiera)
-// 3ero guardar en un estado ese producto
-//pasarle el producto a ItemDetail
+
 export default function ItemDetailContainer(){
   const [product, setProduct] = useState([]);
+
   const {productId} = useParams()
+  
   useEffect(()=>{
     const productRef = doc(baseDatos, "products", productId)
     getDoc(productRef)

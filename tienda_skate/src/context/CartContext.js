@@ -36,13 +36,16 @@ export default function CartContextProvider({children}){
         setCarrito(carrito.filter((product) => product.id !== product.id));
     }
 
+    function sumaTotal(){
+    }
+
 
     function agCarrito(cantidad, product){
         setCarrito([...carrito, {...product, cantidad}]);
     };
 
     return(
-        <CartContext.Provider value={{carrito, agCarrito, eliminarItem,vaciarCarrito, sumarItem, addToCar}}>
+        <CartContext.Provider value={{sumaTotal, carrito, agCarrito, eliminarItem,vaciarCarrito, sumarItem, addToCar}}>
             {children}
         </CartContext.Provider>
     )
