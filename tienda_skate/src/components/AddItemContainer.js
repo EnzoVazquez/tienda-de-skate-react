@@ -1,6 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import React, { useState } from "react";
 import { baseDatos } from "../firebase";
+import './AddItemContainer.css'
 
 export default function Add(){
 
@@ -8,7 +9,7 @@ export default function Add(){
     const [title, setTitle] = useState("");
     const [category, setCategory] = useState("");
     const [price, setPrice] = useState(0);
-    const [pictureUrl, setPictureUrl] = ("");
+    const [pictureUrl, setPictureUrl] = useState("");
     
     const titleChange = event => setTitle(event.target.value);
     const categoryChange = event => setCategory(event.target.value);
@@ -18,6 +19,8 @@ export default function Add(){
     function onSubmit(e){
         e.preventDefault();
         if([title, category, price, pictureUrl].some(field => field === "")){
+           console.log("hay campos vacios")
+        } else{
             console.log("validacion correcta");
     
             const itemCollection = collection(baseDatos, "products");
@@ -25,7 +28,7 @@ export default function Add(){
                 title: title,
                 category: category,
                 price: price,
-                pictureUrl: pictureUrl,
+                pictureUrl: pictureUrl
             }
     
             addDoc(itemCollection, newProduct).then(doc =>{
@@ -33,10 +36,9 @@ export default function Add(){
             }).catch(error=>{
                 console.log("error")
             })
-        } else{
-            console.log("hay campos vacios");
         }
     }
+    
 
 return(
     <div className="formulario">

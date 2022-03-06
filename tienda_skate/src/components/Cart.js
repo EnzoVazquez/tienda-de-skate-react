@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import './cart.css'
-import Item from "./Item";
+import nuevoPedido from "./order";
 
 export default function Cart(){
-    const {carrito, eliminarItem, vaciarCarrito, sumaTotal} = useContext(CartContext)
+    const {carrito, eliminarItem, vaciarCarrito, sumaTotal} = useContext(CartContext);
 
     console.log(carrito);
 
@@ -26,9 +26,12 @@ export default function Cart(){
                     )
                 })
              }
-              <p>El valor total de su compra es</p>
-              <p>$ </p>
-             <button onClick={vaciarCarrito}>Eliminar items</button>
+             <div className="precio">
+                <p>El valor total de su compra es</p>
+                <p>$  </p>
+              <button onClick={vaciarCarrito}>Eliminar items</button>
+              <button onClick={nuevoPedido}>Crear orden de pedido</button>
+             </div>
         </div>
     )
 }

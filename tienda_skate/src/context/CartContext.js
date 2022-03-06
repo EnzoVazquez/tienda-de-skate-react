@@ -37,6 +37,12 @@ export default function CartContextProvider({children}){
     }
 
     function sumaTotal(){
+        var precioInicial = 0
+        carrito.forEach(product => {
+            product.price += precioInicial;
+            console.log(precioInicial);
+            return precioInicial;
+        });
     }
 
 
