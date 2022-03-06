@@ -36,13 +36,17 @@ export default function CartContextProvider({children}){
         setCarrito(carrito.filter((product) => product.id !== product.id));
     }
 
-    function sumaTotal(){
-        var precioInicial = 0
-        carrito.forEach(product => {
-            product.price += precioInicial;
-            console.log(precioInicial);
-            return precioInicial;
+    function SumaTotal(){
+        const [total, setTotal] = useState();
+        const totalPrice = (carrito) => {
+        let count = 0;   
+        carrito.forEach((product) => {
+          count = count + product.price * product.cantidad;
         });
+        setTotal(count);
+        console.log(total);
+        return total;
+      };
     }
 
 
@@ -51,7 +55,7 @@ export default function CartContextProvider({children}){
     };
 
     return(
-        <CartContext.Provider value={{sumaTotal, carrito, agCarrito, eliminarItem,vaciarCarrito, sumarItem, addToCar}}>
+        <CartContext.Provider value={{SumaTotal, carrito, agCarrito, eliminarItem,vaciarCarrito, sumarItem, addToCar}}>
             {children}
         </CartContext.Provider>
     )

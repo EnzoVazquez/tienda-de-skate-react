@@ -28,9 +28,10 @@ export default function Cart(){
              }
              <div className="precio">
                 <p>El valor total de su compra es</p>
-                <p>$  </p>
+                <p>$ {sumaTotal} </p>
               <button onClick={vaciarCarrito}>Eliminar items</button>
               <button onClick={nuevoPedido}>Crear orden de pedido</button>
+              <button onClick={sumaTotal}>suma</button>
              </div>
         </div>
     )
