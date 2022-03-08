@@ -4,6 +4,7 @@ export const CartContext = createContext([]);
 
 export default function CartContextProvider({children}){
     const [carrito, setCarrito] = useState([]);
+    const [total, setTotal] = useState();
 
     function addToCar(cantidad, product){
         if(isOnCart(product.id)){
@@ -36,18 +37,15 @@ export default function CartContextProvider({children}){
         setCarrito(carrito.filter((product) => product.id !== product.id));
     }
 
-    function SumaTotal(){
-        const [total, setTotal] = useState();
-        const totalPrice = (carrito) => {
+    const totalPrice = () => {
         let count = 0;   
         carrito.forEach((product) => {
           count = count + product.price * product.cantidad;
         });
         setTotal(count);
-        console.log(total);
         return total;
-      };
-    }
+
+    };
 
 
     function agCarrito(cantidad, product){
@@ -55,7 +53,7 @@ export default function CartContextProvider({children}){
     };
 
     return(
-        <CartContext.Provider value={{SumaTotal, carrito, agCarrito, eliminarItem,vaciarCarrito, sumarItem, addToCar}}>
+        <CartContext.Provider value={{totalPrice, carrito, agCarrito, eliminarItem,vaciarCarrito, sumarItem, addToCar}}>
             {children}
         </CartContext.Provider>
     )

@@ -4,7 +4,7 @@ import './cart.css'
 import nuevoPedido from "./order";
 
 export default function Cart(){
-    const {carrito, eliminarItem, vaciarCarrito, sumaTotal} = useContext(CartContext);
+    const {carrito, eliminarItem, vaciarCarrito, totalPrice} = useContext(CartContext);
 
     console.log(carrito);
 
@@ -28,10 +28,10 @@ export default function Cart(){
              }
              <div className="precio">
                 <p>El valor total de su compra es</p>
-                <p>$ {sumaTotal} </p>
+                <p>$ {totalPrice} </p>
               <button onClick={vaciarCarrito}>Eliminar items</button>
               <button onClick={nuevoPedido}>Crear orden de pedido</button>
-              <button onClick={sumaTotal}>suma</button>
+              <button onClick={totalPrice}>suma</button>
              </div>
         </div>
     )
