@@ -39,9 +39,9 @@ export default function Cart(){
              <div className="precio">
                 <p>El valor total de su compra es</p>
                 <p>$ {totalPrice()} </p>
-              <button onClick={vaciarCarrito}>Eliminar items</button>
+              <button onClick={vaciarCarrito} className="botonInicio">Eliminar items</button>
               <Link to={'/Checkout'}>
-                <button >Finalizar compra</button>
+                <button className="botonInicio">Finalizar compra</button>
               </Link>
              </div>
              </div>

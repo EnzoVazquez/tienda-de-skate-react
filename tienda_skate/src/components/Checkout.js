@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Checkout(){
-    const {carrito, totalPrice} = useContext(CartContext);
+    const {carrito, totalPrice, vaciarCarrito} = useContext(CartContext);
 
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
@@ -38,6 +38,7 @@ export default function Checkout(){
         e.preventDefault();
         if(mail === repetirMail){
             nuevoPedido();
+            vaciarCarrito();
             e.target.reset();
         }else{
             alert("los mails no coinciden")
