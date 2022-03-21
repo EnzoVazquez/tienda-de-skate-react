@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.resumen{
+    display: flex;
+    flex-direction: column;
+}
+.imagenChica{
+    width: 100px;
+    float: left;
+    margin: 1rem;
+}
+.itemCarrito{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+.itemCarrito h2{
+    color: black;
+}
+.itemCarrito p{
+    color: black;
+}
+.tituloFormulario{
+    text-align: center;
+    font-family: 'Germania One', cursive;
+}
+.tituloSecundario{
+    font-family: 'Germania One', cursive;
+    margin-left: 2rem;
+}
+.totalPrice{
+    margin-left: 2rem;
+    font-weight: bolder;
+}
+label{
+    margin-left: 2rem;
+    font-weight: bolder;
+}
+.botonClasico{
+    border-radius: 20px;
+    color: white;
+    width: 7rem;
+    background-color: #9B0000;
+    margin: 2rem;
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -34,4 +36,20 @@
 }
 .precio p{
 color: black;
+}
+.tituloPrincipal{
+    font-family: 'Germania One', cursive;
+    font-size: 3rem;
+    margin-left: 5rem;
+}
+.ceroProductos{
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.botonInicio{
+    border-radius: 20px;
+    width: 9rem;
+    color: white;
+    background-color: #9B0000;
 }

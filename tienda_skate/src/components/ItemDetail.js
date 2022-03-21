@@ -10,6 +10,7 @@ export default function ItemDetail(product){
     const [cantidad, setCantidad] = useState()
 
     function AgregarItem(cantidad){
+        setCantidad(cantidad)
         addToCar(cantidad, product.product)
     }
 
@@ -23,9 +24,14 @@ export default function ItemDetail(product){
                 {
                     !cantidad ?
                     <ItemCount stock={5} initial={1} onAdd={AgregarItem}/> :
+                    <div>
                     <Link to={'/cart'}>
-                        <button>Ir al carrito</button>
+                        <button className='botonDesp'>Ir al carrito</button>
                     </Link>
+                    <Link to={'/'}>
+                        <button className='botonDesp'>Ir al inicio</button>
+                    </Link>
+                    </div>
                 }
                 </div>
             </div>

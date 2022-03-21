@@ -1,17 +1,17 @@
 import React from 'react';
 import './NavBar.css';
 import Carrito from './CartWidget'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function NavBar(){
     return(
         <div> 
             <ul>
                 <h1>POST MORTEM</h1>
-                <a>TABLAS</a>
-                <a>TRUCKERS</a>
-                <a>RULEMANES</a>
-                <a>LIJAS</a>
+                <li><NavLink to="/category/tabla"><a>TABLAS</a></NavLink></li>
+                <li><NavLink to="/category/trucks"><a>TRUCKERS</a></NavLink></li>
+                <li><NavLink to="/category/rulemanes"><a>RULEMANES</a></NavLink></li>
+                <li><NavLink to="/category/lijas"><a>LIJAS</a></NavLink></li>
                 <Link to={'/cart'}>
                     <Carrito/>
                 </Link>

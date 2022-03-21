@@ -33,8 +33,8 @@ export default function CartContextProvider({children}){
         })
     };
     
-    function eliminarItem(){
-        setCarrito(carrito.filter((product) => product.id !== product.id));
+    function eliminarItem(id){
+        setCarrito(carrito.filter((product) => product.id !== id));
     }
 
     const totalPrice = () => {

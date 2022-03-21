@@ -28,3 +28,10 @@
     margin-left: -6rem;
 }
 
+.botonDesp{
+    border-radius: 20px;
+    color: white;
+    width: 7rem;
+    background-color: #9B0000;
+    margin: 2rem;
+}
